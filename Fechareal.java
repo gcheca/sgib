@@ -63,6 +63,7 @@ public class Fechareal
         this.Annof=Annof;
     }
 
+//Cadena toString
 public String toString(){
     String s="[";
     s=s+Diaf+"-";
@@ -71,6 +72,7 @@ public String toString(){
     return s;
 }
 
+//Formula para sacar año bisiesto. lineadecodigo.com
 private boolean esbisiesto(int anio){
 if ((anio % 4 == 0) && ((anio % 100 != 0) || (anio % 400 == 0)))
 	return true;
