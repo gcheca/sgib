@@ -9,6 +9,6 @@ public class Usuario{
 	private boolean Empleado;	
 	private boolean Tienemulta;
 	private Fechareal Fechaalta;
-/	Uso DNI como ID? 
+//	Uso DNI como ID? 
 //	private int Idbib;
 }
