@@ -20,10 +20,10 @@
         {
         	this.Nombre=Nombre;
         	this.Apellido=Apellido;
-        	this.DNI;
-        	this.Empleado;
-        	this.Multa;
-        	this.Fechaalta;
+        	this.DNI=DNI;
+        	this.Empleado=Empleado;
+        	this.Multa=Multa;
+        	this.Fechaalta=Fechaalta;
         }
 	
 	//Constructor con Atributos asignados
@@ -32,11 +32,17 @@
 		this.Nombre=new String("Name");
 		this.Apellido=new String("Surname");
 		this.DNI=new String("xxxxxxxxX");
-		this.Empleado=new boolean(false);
-		this.Multa=new boolean(false);
+		this.Empleado=false;
+		this.Multa=false;
 		this.Fechaalta=new Fechareal(01,01,2016);
 	}
-        
+     	
+     	
+     	//Metodos
+     	public String GetNombre()
+     	{
+     		return Nombre;
+     	}
 // Posibles métodos:
 /*
 	DameNombre
