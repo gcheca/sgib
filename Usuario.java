@@ -1,14 +1,30 @@
+/**
+ * class Usuario
+ * 
+ * @author Gcheca
+ * @version 0.1.1 12/04/2016
+ */
+    /* Constructor for objects of class Usuario  */
+    public class Usuario
+    {
+        private String Nombre;
+        private String Apellido;
+        //DNI String o integer?
+        private String DNI;
+        private boolean Empleado;
+        private boolean Multa;
+        private Fechareal Fechaalta;
+        //Uso del DNI como posible ID?
+        private int IDuser;
+    }
+    
+// Posibles métodos:
 /*
-* Clase Usuario 0.1
+	DameNombre
+	DameApellido
+	DameDNI
+	EsEmpleado
+	TieneMulta
+	Fechaalta
+	DameID
 */
-
-public class Usuario{
-	private String Nombre;
-	private String Apellido;
-	private String DNI;
-	private boolean Empleado;	
-	private boolean Tienemulta;
-	private Fechareal Fechaalta;
-//	Uso DNI como ID? 
-//	private int Idbib;
-}
