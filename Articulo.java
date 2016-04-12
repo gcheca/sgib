@@ -3,7 +3,7 @@
  * Clase genérica artículos Biblioteca
  * 
  * @author Guillermo Checa 
- * @version 0.1 6/4/16
+ * @version 0.1.1 12/04/2016
  */
 
 public class Articulo
@@ -15,6 +15,6 @@ public class Articulo
         private int anno;
         private boolean prestado;
         private Fechareal fechadevolucion;
-        // initialise instance variables
-    
+        private boolean disponibilidad;
+          
 }
