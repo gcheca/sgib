@@ -14,10 +14,29 @@
         private boolean Empleado;
         private boolean Multa;
         private Fechareal Fechaalta;
-        //Uso del DNI como posible ID?
-        private int IDuser;
-    }
-    
+
+        //Constructor con Atributos
+        public Usuario (String Nombre, String Apellido, String DNI, boolean Empleado, boolean Multa, Fechareal Fechaalta)
+        {
+        	this.Nombre=Nombre;
+        	this.Apellido=Apellido;
+        	this.DNI;
+        	this.Empleado;
+        	this.Multa;
+        	this.Fechaalta;
+        }
+	
+	//Constructor con Atributos asignados
+	public Usuario()
+	{
+		this.Nombre=new String("Name");
+		this.Apellido=new String("Surname");
+		this.DNI=new String("xxxxxxxxX");
+		this.Empleado=new boolean(false);
+		this.Multa=new boolean(false);
+		this.Fechaalta=new Fechareal(01,01,2016);
+	}
+        
 // Posibles métodos:
 /*
 	DameNombre
@@ -28,3 +47,9 @@
 	Fechaalta
 	DameID
 */
+
+    	
+}
+    
+    //fin clase Usuario
+ 
