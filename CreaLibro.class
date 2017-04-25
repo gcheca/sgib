@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class CreaLibro
+{
+    public static void main()
+    {
+        
+        Scanner sc=new Scanner(System.in);
+        Libro[]libros=new Libro[10];
+        int nlib=0;
+        int opcion;
+    
+        do
+        {
+            System.out.println(" ** Menu ** \n1.Nuevo Libro \n2.Listar Libros \n3.Salir");
+            opcion=sc.nextInt();
+            sc.nextLine();
+            switch(opcion)
+            {
+                case 1:
+                String idit;
+                System.out.println("Introduce Identificador:");
+                idit=sc.nextLine();
+                
+                System.out.println("introduce Nombre del item:");
+                String nit=sc.nextLine();
+                
+                System.out.println("introduce tipo del item:");
+                String tipit=sc.nextLine(); 
+                
+                System.out.println("Introduce Año del libro: ");
+                int anit=sc.nextInt();
+                sc.nextLine();
+                
+                Boolean p;                      
+                System.out.println("Está prestado? ");
+                String prest=sc.nextLine();
+                
+                String Siprestado = "Está prestado";
+                String Noprestado = "Está disponible";
+                
+                if(prest.equals("No"))
+                    {p=false;}
+                else
+                    {p=true;}
+                    
+                System.out.println("Fecha de devolución Dia: ");
+                int dia=sc.nextInt();     
+                System.out.println("Fecha de devolución Mes: ");
+                int mes=sc.nextInt();
+                System.out.println("Fecha de devolución Año: ");
+                int anno=sc.nextInt();
+                Fechareal f=new Fechareal(dia, mes, anno);
+                sc.nextLine();
+                
+                System.out.println("Introduce el título del libro: ");
+                String titlib=sc.nextLine();
+                
+                System.out.println("Introduce autor del libro: ");
+                String autlib=sc.nextLine();
+                
+                System.out.println("Introduce editorial libro: ");
+                String edlib=sc.nextLine();
+                
+                System.out.println("Introduce genero del libro: ");
+                String genlib=sc.nextLine();
+                          
+                System.out.println("Introduce ISBN: ");
+                Long islib=sc.nextLong();
+                sc.nextLine();
+                              
+                //public Usuario (String Nombre, String Apellido, String DNI, boolean Empleado, boolean Multa, Fechareal Fechaalta)+
+                libros[nlib]=new Libro(idit, nit, tipit, anit, p, f, titlib, autlib, edlib, genlib, islib);
+                nlib++;
+                break;
+                
+                case 2: 
+                    for(int i=0; i<nlib;i++)
+                    {
+                        System.out.println("Libro: "+libros[i]);
+                    }
+                break;
+                default:System.out.println("Opción incorrecta");
+            }
+        }
+        while(opcion != 3);
+        System.out.println("Adios!");
+    }
+}
