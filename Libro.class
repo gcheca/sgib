@@ -1,0 +1,70 @@
+public class Libro extends Prestable
+{
+    //Atributos
+    private String Subtitulolib;
+    private String Autorlib;
+    private String Editoriallib;
+    private String Generolib;
+    private long ISBN;
+//  private * *;
+
+//Comienza Setter&Getter
+    public String GetSubtitulolib()
+    {return Subtitulolib;}
+public void setSubtitulolib(String Subtitulolib)
+    {this.Subtitulolib=Subtitulolib;}
+    
+    public String GetAutorlib()
+    {return Autorlib;}
+public void setAutorlib(String Autorlib)
+    {this.Autorlib=Autorlib;}
+    
+    public String GetEditoriallib()
+    {return Editoriallib;}
+public void setEditoriallib(String Editoriallib)
+    {this.Editoriallib=Editoriallib;}
+    
+    public String GetGenerolib()
+    {return Generolib;}
+public void setGenerolib(String Generolib)
+    {this.Generolib=Generolib;}
+    
+    public long GetISBN()
+    {return ISBN;}
+public void setISBN(long ISBN)
+    {this.ISBN=ISBN;}
+//Acaba S&G
+
+//Constructor por parámetros
+public Libro(String identificador, String nombreitem, String tipoitem, int anno, boolean Prestado, Fechareal Fechadev, String Subtitulolib, String Autorlib, String Editoriallib, String Generolib, long ISBN)
+        {
+            super();
+            this.setIdentificador(identificador);
+            this.setNombreitem(nombreitem);
+            this.setTipoitem(tipoitem);
+            this.setanno(anno);
+            this.setPrestado(Prestado);
+            this.setFechadev(Fechadev);
+            this.Subtitulolib=Subtitulolib;
+            this.Autorlib=Autorlib;
+            this.Editoriallib=Editoriallib;
+            this.Generolib=Generolib;
+            this.ISBN=ISBN;
+        }
+        
+//Constructor default
+        public Libro()
+        {
+            this.setIdentificador(new String("Identificador"));
+            this.setNombreitem(new String("Nombre del Item"));
+            this.setTipoitem(new String ("Tipo de Item"));
+            this.setanno(2000);
+            this.setPrestado(true);
+            this.setFechadev(new Fechareal(31,12,2016));
+            this.Subtitulolib=new String("Titulo del libro");
+            this.Autorlib=new String("Autor");
+            this.Editoriallib=new String("String");
+            this.Generolib=new String("Genero");
+            this.ISBN=1000000;
+        }
+}
