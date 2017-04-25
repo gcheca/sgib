@@ -1,0 +1,49 @@
+public abstract class Prestable extends Item
+{
+    // Atributos propios de clase Prestable
+    private boolean Prestado;
+    private Fechareal Fechadev;
+
+    //Constructor
+
+    public String toString(){
+
+        String s="Este ítem "+super.toString();
+        s=s.concat(this.Prestado+", ");
+            if(this.Prestado==true)
+                {s=s.concat("está prestado, ");}
+            else
+                {s=s.concat("está disponible, ");}             
+            s=s.concat(this.Fechadev+ ", ");
+            return s;
+    }
+    
+    //Constructor por parámetros
+    public Prestable (String identificador, String nombreart, String tipoart, int anno, boolean Prestado, Fechareal Fechadev)
+    {
+        super(identificador, nombreart, tipoart, anno, Prestado, Fechadev);
+        this.Prestado=Prestado;
+        this.Fechadev=Fechadev;
+    }
+    
+    //Constructor default
+    public Prestable()
+    {
+        super();
+        this.Prestado=false;
+        this.Fechadev=new Fechareal(31,12,2016);
+    }
+    
+    public boolean GetPrestado()
+    {return Prestado;}
+    
+    public void setPrestado(boolean Prestado)
+    {this.Prestado=Prestado;}
+    
+    public Fechareal GetFechadev()
+    {return Fechadev;}
+    
+    public void setFechadev(Fechareal Fechadev)
+    {this.Fechadev=Fechadev;}
+    
+}
