@@ -1,0 +1,87 @@
+public abstract class Item{
+    
+    // Atributos
+        private String identificador;
+        private String nombreitem;
+        private String tipoitem;
+        private int anno;
+        //Quito prestado y disponibilidad para añadirlo a la clase prestado. 
+
+       //Constructor
+        public String toString(){
+            String s="Articulo: ";
+                s=s.concat(this.getIdentificador()+", ");
+                s=s.concat(this.getNombreitem()+", ");
+                s=s.concat(this.getTipoitem()+", ");
+                s=s.concat(this.getanno()+", ");
+                //s=s.concat(this.disponibilidad".\n");
+                return s;
+        }
+        //Constructor por parámetros
+        public Item (String identificador, String nombreart, String tipoart, int anno, boolean prestado, Fechareal fechadevolucion)
+        {
+            this.identificador=identificador;
+            this.nombreitem=nombreart;
+            this.tipoitem=tipoart;
+            this.anno=anno;          
+        }
+    
+        //Constructor default
+        public Item()
+        {
+            this.identificador=(new String("000000"));
+            this.nombreitem=(new String("Articulo"));
+            this.tipoitem=(new String("Generico"));
+            this.anno=(2016);
+        }
+
+    /**
+     * Getter and Setter de identificador
+     */
+    public String getIdentificador() {
+        return identificador;
+    }
+
+  
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+
+    /**
+     * Getter and Setter nombreitem
+     */
+    public String getNombreitem() {
+        return nombreitem;
+    }
+
+  
+    public void setNombreitem(String nombreitem) {
+        this.nombreitem = nombreitem;
+    }
+
+    /**
+     * Getter and Setter de tipoitem
+     */
+    public String getTipoitem() {
+        return tipoitem;
+    }
+
+ 
+    public void setTipoitem(String tipoitem) {
+        this.tipoitem = tipoitem;
+    }
+
+    /**
+     * Getter and Setter de anno
+     */
+    public int getanno() {
+        return anno;
+    }
+
+ 
+    public void setanno(int anno) {
+        this.anno=anno;
+    }
+
+ 
+}
