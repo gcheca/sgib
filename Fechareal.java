@@ -72,7 +72,7 @@ public String toString(){
     return s;
 }
 
-//Formula para sacar año bisiesto. lineadecodigo.com
+//Formula para sacar año bisiesto
 private boolean esbisiesto(int anio){
 if ((anio % 4 == 0) && ((anio % 100 != 0) || (anio % 400 == 0)))
 	return true;
